@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ☕ Kopi Kopen Mobile
 
 Aplikasi mobile pelanggan + backend API untuk Kopi Kopen.
@@ -61,3 +62,6 @@ Mobile checkout
 - Pajak di backend (`orders.js`) dan frontend (`ReceiptScreen.js`) sama-sama **11% (PPN)**
 - Gambar menu diambil dari folder `uploads/` project kopi-kopen (web) via `/uploads/` endpoint
 - `UPLOADS_DIR` di `.env` harus menunjuk ke folder `uploads/` yang sama dengan yang dipakai PHP
+=======
+# kopi-kopen-copy
+>>>>>>> a3e1dd88b0b2afefe92dffdc263773d934d32ce7
