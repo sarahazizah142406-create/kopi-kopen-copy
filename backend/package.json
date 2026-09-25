@@ -1,0 +1,20 @@
+{
+  "name": "kopi-kopen-customer-api",
+  "version": "2.0.0",
+  "description": "REST API + Socket.IO untuk aplikasi mobile Kopi Kopen.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "expo": "57.0.26",
+    "express": "^5.1.0",
+    "helmet": "^8.0.0",
+    "mysql2": "^3.12.0",
+    "socket.io": "^4.7.5"
+  }
+}
