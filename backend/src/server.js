@@ -54,9 +54,12 @@ app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 app.use("/uploads", express.static(uploadsDir));
 
-// 🛑 TAMBAHKAN DUA BARIS SAKTI INI DI SINI:
-const frontendPath = path.resolve(__dirname, "../public"); // 👈 Ganti "public" dengan nama folder frontend tokomu (misal: "frontend" atau "views")
+// 🛑 GANTI JALUR FRONTEND DENGAN LOGIKA MELOMPAT KELUAR FOLDER INI:
+// Perintah "../" di bawah artinya Express melompat keluar dari folder backend 
+// untuk mencari folder frontend tokomu di folder utama GitHub.
+const frontendPath = path.resolve(__dirname, "../frontend-rn"); // 👈 Ganti "frontend-rn" dengan nama asli folder frontend kamu di GitHub
 app.use(express.static(frontendPath));
+
 
 // ── Routes ──────────────────────────────────────────────────────────────────
 app.get("/health", (_req, res) => {
