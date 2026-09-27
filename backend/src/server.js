@@ -54,10 +54,9 @@ app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 app.use("/uploads", express.static(uploadsDir));
 
-// 🛑 TAMBAHKAN BARIS INI UNTUK MENYALAKAN FRONTEND/WEB DI BROWSER HP:
-const frontendDir = path.resolve(__dirname, "../../kopi-kopen"); 
-app.use(express.static(frontendDir));
-
+// 🛑 TAMBAHKAN DUA BARIS SAKTI INI DI SINI:
+const frontendPath = path.resolve(__dirname, "../public"); // 👈 Ganti "public" dengan nama folder frontend tokomu (misal: "frontend" atau "views")
+app.use(express.static(frontendPath));
 
 // ── Routes ──────────────────────────────────────────────────────────────────
 app.get("/health", (_req, res) => {
