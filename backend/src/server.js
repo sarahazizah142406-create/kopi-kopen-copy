@@ -48,10 +48,16 @@ io.on("connection", (socket) => {
 });
 
 // ── Middleware ──────────────────────────────────────────────────────────────
+// ── Middleware ──────────────────────────────────────────────────────────────
 app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 app.use("/uploads", express.static(uploadsDir));
+
+// 🛑 TAMBAHKAN BARIS INI UNTUK MENYALAKAN FRONTEND/WEB DI BROWSER HP:
+const frontendDir = path.resolve(__dirname, "../../kopi-kopen"); 
+app.use(express.static(frontendDir));
+
 
 // ── Routes ──────────────────────────────────────────────────────────────────
 app.get("/health", (_req, res) => {
